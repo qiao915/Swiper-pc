@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		 <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>swiper-pc</title>
+		<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper-pc.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			#box{
+				max-width: 800px;
+				margin: 60px auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div id='box'>
+			<div id="Swiper"></div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		console.log("%c邮箱  %cqiao_915@yeah.net%c  欢迎技术交流探讨","text-shadow:none"," text-shadow: 0 1px 0 #ccc,0 2px 0 #c9c9c9,0 3px 0 #bbb,0 4px 0 #b9b9b9,0 5px 0 #aaa,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);font-size:3em","text-shadow:none");
+		onload=function(){
+			var swperList = ['img/1.png','img/2.png','img/3.png','img/4.png'];
+			/**
+			 * 轮播图的大小尺寸需要统一
+			 */ 
+			$('#Swiper').Swiper({               //#Swiper轮播图滚动容器id    必传参数
+				swiper:swperList,                 //轮播图图片数组          Array      例：['img1',['img2','img3'.....]  必传参数
+				index:0,                          //初始显示图片index       Number     默认值：0
+				time:2000,                        //轮播间隔时间ms          Number     默认值：2000
+				SwiperPaperStyle : {              //轮播图导航点样式设置     Object
+					  width : '25px',               //导航点的宽度            String     默认值：'25px'
+					  height : '5px',               //导航点的高度            String     默认值：'5px'
+					  bg : '#eee',                  //导航点背景颜色          String     默认值：'#eee'
+					  activeBg : '#fb513a',         //导航点激活状态背景颜色   String     默认值：'#fb513a'
+					  bottom : '10px',              //导航点距离容器底部距离   String     默认值：'10px'
+				},
+			  });
+		}
+	</script>
+</html>
